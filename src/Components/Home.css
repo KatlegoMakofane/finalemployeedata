@@ -1,0 +1,13 @@
+body{
+    background-color: aliceblue;   
+}
+.home
+{
+    width: 90%;
+    height: 200px;
+    background-color: orange;
+    align-items: center;justify-content: center;
+    margin-left: 100px;
+    margin-top: 200px;
+
+}

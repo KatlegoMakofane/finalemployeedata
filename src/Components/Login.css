@@ -1,0 +1,47 @@
+body{
+
+    background-color: aliceblue;   
+   
+   }
+   .formcontainer1{
+       width: 380px;
+       height: 500px;
+       background-color: aquamarine;
+       margin-left: 600px;
+       border-radius: 20px;
+       margin-top: 100px;
+
+   }
+   .formcontainer1 .h1{
+    margin-top: 10px;
+   }
+ 
+   .formcontainer1 .form-group label{
+       display: inline-block;
+      font-size: 40px;
+      text-align: center;
+     
+      margin-left: 0px;
+      left:0px;
+       text-align: center;
+   }
+   .formcontainer1 .form-group input{
+   
+       border-radius: 20px;
+       width: 300px;
+       height: 40px;
+       display: flex;
+       margin-left: 30px;
+       font-size: 20px;
+       text-align: center;
+   }
+   .formcontainer1 button{
+       margin-top: 20px;
+       width: 150px;
+       height: 40px;
+       border-radius: 20px;
+   }
+   
+   .formcontainer1 p{
+    margin-top: 50px;
+   }

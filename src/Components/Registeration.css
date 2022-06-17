@@ -1,0 +1,39 @@
+body{
+
+    background-color: aliceblue;   
+   
+   }
+   .formcontainer{
+       width: 380px;
+       height: 900px;
+       background-color: aquamarine;
+       margin-left: 600px;
+       border-radius: 20px;
+
+   }
+ 
+   .formcontainer .form-group label{
+       display: inline-block;
+      font-size: 40px;
+      text-align: center;
+     
+      margin-left: 0px;
+      left:0px;
+       text-align: center;
+   }
+   .formcontainer .form-group input{
+   
+       border-radius: 20px;
+       width: 300px;
+       height: 40px;
+       display: flex;
+       margin-left: 30px;
+       font-size: 20px;
+       text-align: center;
+   }
+   .formcontainer button{
+       margin-top: 20px;
+       width: 150px;
+       height: 40px;
+       border-radius: 20px;
+   }
