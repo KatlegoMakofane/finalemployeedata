@@ -1,6 +1,7 @@
 import './Registeration.css'
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
+import Login from './Login';
 
 function Registeration() {
 
@@ -11,9 +12,13 @@ function Registeration() {
     const[ employeenumber, setEmployeenumber] =useState("");
     const[ password, setPassword] =useState("");
     const[ image, setImage]=useState("");
+    let lowerCaseLetters = /[a-z]/g;
+    let upperCaseLetters = /[A-Z]/g;
+    let numbers = /[0-9]/g;
+    
 
 
-    function setPic(setImage){
+    function setPic(image){
         const imgPath = document.querySelector("#userImage1").files[0];
         const reader = new FileReader();
         reader.addEventListener("load", function() {
@@ -32,7 +37,8 @@ function Registeration() {
             contact:contact,
             employeenumber:employeenumber,
             password:password,
-            image:image
+            image:image,
+            date: new Date
 
 
 
@@ -55,6 +61,12 @@ function Registeration() {
             alert("Enter Your Password")
         }else if(employeeDetails.password.length<10){
             alert("Your Password Must Have 10 Characrters")
+        }else if(!employeeDetails.password.match(numbers)){
+            alert("Enter add 1 number");
+        }else if(!employeeDetails.password.match(lowerCaseLetters)){
+            alert("Enter 1 lower case letter")
+        }else if(!employeeDetails.password.match(upperCaseLetters)){
+            alert("Enter 1 upper case letter");
         }
 
         else {
@@ -69,8 +81,9 @@ function Registeration() {
                 storedEmpolyeeDetails.push(employeeDetails);
             }
             alert("Your Account have been created");
-            window.Location='/Login';
+            window.location="/"
             localStorage.setItem("user",JSON.stringify(storedEmpolyeeDetails));
+           
             
         }
   

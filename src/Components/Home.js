@@ -1,15 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
+import {Link} from 'react-router-dom'
 
 function Home() {
     
-    const getuserArr=JSON.stringify(localStorage.getItem("user"));
-     console.log( getuserArr);
+   const [user,setUser]=useState(JSON.parse(localStorage.getItem("user")));
+  
+     
      
   return (
-    <div className='home'>Home
+    <div className='home'>  <h1>Employee Details</h1>
+    <button ><Link  to="/">Log out</Link></button> 
     <div className='display'>
-        { getuserArr}
+    {user.map((user,index)=>{
+                        return( 
+                   
+                            <div  className='displayinfo'>
+                             
+                             
+                            
+                                <span> Name: <p>{user.name}</p> </span>
+                                <span> Surname: <p>{user.surname}</p> </span>
+                                <span> Email: <p>{user.email}</p></span>
+                                <span> Contact number: <p>{user.contact}</p></span>
+                                <span> Time: <p> {user.date} </p></span>
+                            </div>
+                        )
+                        
+                    })}
     </div>
     </div>
     

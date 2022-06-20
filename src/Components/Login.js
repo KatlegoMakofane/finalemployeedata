@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 import './Login.css'
 import {Link} from 'react-router-dom'
-import Home from './Home';
+
 
 function Login() {
 
@@ -26,21 +26,28 @@ function Login() {
     }else  if(logdetails.password===""){
     alert("Enter Your Password")
     }else if(logdetails.password.length<10){
-    alert("Your Password Must Have 10 Characrters")
+    alert("Your Password Must Have 10 Characters")
     }
     else {
       let storedUsers = JSON.parse(localStorage.getItem("user"));
-      let user =storedUsers;
+
+      let userFound=false;
+      
       for(let user of storedUsers) {
         
         if(email === user.email && password === user.password){
+
           alert("You have enter correct Email and password");
+          userFound=true
           window.location = "/Home";
         }
-     }
-
-     
-      alert("You have enter wrong Email and password");
+       }
+       if(!userFound){
+        alert("You have enter wrong Email and password");
+       }
+    
+    
+      
     
     // if(email===getuserArr[email] && password===getuserArr[password]){
     //   alert("You have enter coorect Email and password");

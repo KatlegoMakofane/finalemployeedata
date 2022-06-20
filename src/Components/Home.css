@@ -1,13 +1,38 @@
 body{
     background-color: aliceblue;   
 }
-.home
+.home h1
 {
-    width: 90%;
-    height: 200px;
-    background-color: orange;
-    align-items: center;justify-content: center;
-    margin-left: 100px;
-    margin-top: 200px;
+margin-top: 20px;
+background-color: aqua;
+border-radius: 20px;
+}
+.home button{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    margin-top: -55px;
+    right: 25px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: white;
+}
+.home button:hover{
+   background-color: blueviolet;
+   
+}
+.display{ 
+     background-color: orange;
+     border-radius: 60px;
+     margin-top: 20px;
+  }
+ .displayinfo span{
+   
+width: 60px;;
+height:30px ;
+display: inline-block;
+margin-left:200px;
+color: black;
 
 }
+
