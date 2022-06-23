@@ -11,14 +11,14 @@ function Home() {
   return (
     <div className='home'>  <h1>Employee Details</h1>
     <button ><Link  to="/">Log out</Link></button> 
-    <div className='display'>
+    <div className='display'>     
     {user.map((user,index)=>{
                         return( 
                    
                             <div  className='displayinfo'>
                              
                              
-                            
+                             <span> <p><img src={user.image} className="imguser" /></p> </span>
                                 <span> Name: <p>{user.name}</p> </span>
                                 <span> Surname: <p>{user.surname}</p> </span>
                                 <span> Email: <p>{user.email}</p></span>

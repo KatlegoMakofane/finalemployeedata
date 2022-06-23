@@ -37,7 +37,7 @@ function Registeration() {
             contact:contact,
             employeenumber:employeenumber,
             password:password,
-            image:image,
+            image:localStorage.getItem('image'),
             date: new Date
 
 
